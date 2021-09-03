@@ -6,7 +6,7 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -37,7 +37,7 @@ public class PostRequestWithPojo01 extends TestBaseJsonPlaceHolder {
                       "completed": false
                     }
  */
-    @Test
+   @Test
     public void test(){
         //url endpoint oluşturdum
         spec01.pathParam("parametre1","todos");

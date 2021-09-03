@@ -7,7 +7,7 @@ import com.techproed.testBase.TestBaseHerokuApp;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
@@ -41,8 +41,8 @@ https://restful-booker.herokuapp.com/booking
                          }
  */
 
-    @Test
-    public void test(){
+@Test
+public void test(){
         spec02.pathParam("param1","booking");
 
         BookingDatesPojo bookingDatesPojo = new BookingDatesPojo("2020-09-09","2020-09-21");
@@ -52,7 +52,7 @@ https://restful-booker.herokuapp.com/booking
         // diyerek nested yapiyi olusturmus olduk.
 
         Response response=given().contentType("application/json").
-                spec(spec02).auth().basic("admin","password123").body(booking).when().post("/{name}");
+                spec(spec02).auth().basic("admin","password123").body(booking).when().post("/{param1}");
 
         response.prettyPrint();
 

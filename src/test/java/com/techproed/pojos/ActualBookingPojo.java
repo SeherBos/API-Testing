@@ -18,16 +18,24 @@ public class ActualBookingPojo {
                          }
      */
 
-    private int bookingId;
+    private int bookingid;
     private  BookingPojo booking;
 
-
-    public int getBookingId() {
-        return bookingId;
+    public ActualBookingPojo() {
     }
 
-    public void setBookingId(int bookingId) {
-        this.bookingId = bookingId;
+    public ActualBookingPojo(int bookingid, BookingPojo booking) {
+        this.bookingid = bookingid;
+        this.booking = booking;
+    }
+
+    public int getBookingid() {
+        return bookingid;
+    }
+
+
+    public void setBookingid(int bookingid) {
+        this.bookingid = bookingid;
     }
 
     public BookingPojo getBooking() {
@@ -38,25 +46,13 @@ public class ActualBookingPojo {
         this.booking = booking;
     }
 
-    public ActualBookingPojo() {
-    }
-
-    public ActualBookingPojo(int bookingId, BookingPojo booking) {
-        this.bookingId = bookingId;
-        this.booking = booking;
-    }
-
     @Override
     public String toString() {
         return "ActualBookingPojo{" +
-                "bookingId=" + bookingId +
+                "bookingid=" + bookingid +
                 ", booking=" + booking +
                 '}';
     }
-
-
-
-
 
 
 
